@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 const projects = [
   { n: "01", title: "Futuristic Spacecraft Control Interface", sub: "Advanced Systems Design & Real-Time Data Visualization", tags: ["System Design", "Futuristic UI", "Data Viz", "Dashboard UX"], img: projectSpacecraft },
-  { n: "02", title: "AI Emotion-Adaptive Learning Platform", sub: "AI-Powered Behavioral UX Ecosystem", tags: ["AI UX", "Behavioral Design", "Adaptive", "Emotional UX"], img: contactBg },
+  { n: "02", title: "AI Emotion-Adaptive Learning Platform", sub: "AI-Powered Behavioral UX Ecosystem", tags: ["AI UX", "Behavioral Design", "Adaptive", "Emotional UX"], img: projectAi },
   { n: "03", title: "Disaster Response & Emergency Comms", sub: "High-Stress UX & Accessibility Design", tags: ["Accessibility", "Emergency UX", "Critical Systems"], img: projectEmergency },
   { n: "04", title: "Neurodivergent-Friendly Social Platform", sub: "Inclusive & Emotionally Intelligent UX", tags: ["Inclusive Design", "Accessibility", "Behavioral Research"], img: projectInclusive },
 ];
