@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Marquee } from "@/components/Marquee";
-import trustImg from "@/assets/trust-process.jpeg";
-import doMoreImg from "@/assets/do-more.jpeg";
-import redLandscape from "@/assets/red-landscape.jpeg";
-import yourLimit from "@/assets/your-limit.jpeg";
-import peaceImg from "@/assets/peace-productivity.jpeg";
-import privateSite from "@/assets/private-site.jpeg";
-import codeCoffee from "@/assets/code-coffee.jpeg";
-import wavesBg from "@/assets/waves-bg.jpeg";
+import heroWorkspace from "@/assets/hero-workspace.jpg";
+import manifestoBg from "@/assets/manifesto-bg.jpg";
+import contactBg from "@/assets/contact-bg.jpg";
+import processSketch from "@/assets/process-sketch.jpg";
+import projectSpacecraft from "@/assets/project-spacecraft.jpg";
+import projectAi from "@/assets/project-ai.jpg";
+import projectEmergency from "@/assets/project-emergency.jpg";
+import projectInclusive from "@/assets/project-inclusive.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,10 +28,10 @@ export const Route = createFileRoute("/")({
 });
 
 const projects = [
-  { n: "01", title: "Futuristic Spacecraft Control Interface", sub: "Advanced Systems Design & Real-Time Data Visualization", tags: ["System Design", "Futuristic UI", "Data Viz", "Dashboard UX"], img: redLandscape },
-  { n: "02", title: "AI Emotion-Adaptive Learning Platform", sub: "AI-Powered Behavioral UX Ecosystem", tags: ["AI UX", "Behavioral Design", "Adaptive", "Emotional UX"], img: doMoreImg },
-  { n: "03", title: "Disaster Response & Emergency Comms", sub: "High-Stress UX & Accessibility Design", tags: ["Accessibility", "Emergency UX", "Critical Systems"], img: peaceImg },
-  { n: "04", title: "Neurodivergent-Friendly Social Platform", sub: "Inclusive & Emotionally Intelligent UX", tags: ["Inclusive Design", "Accessibility", "Behavioral Research"], img: yourLimit },
+  { n: "01", title: "Futuristic Spacecraft Control Interface", sub: "Advanced Systems Design & Real-Time Data Visualization", tags: ["System Design", "Futuristic UI", "Data Viz", "Dashboard UX"], img: projectSpacecraft },
+  { n: "02", title: "AI Emotion-Adaptive Learning Platform", sub: "AI-Powered Behavioral UX Ecosystem", tags: ["AI UX", "Behavioral Design", "Adaptive", "Emotional UX"], img: projectAi },
+  { n: "03", title: "Disaster Response & Emergency Comms", sub: "High-Stress UX & Accessibility Design", tags: ["Accessibility", "Emergency UX", "Critical Systems"], img: projectEmergency },
+  { n: "04", title: "Neurodivergent-Friendly Social Platform", sub: "Inclusive & Emotionally Intelligent UX", tags: ["Inclusive Design", "Accessibility", "Behavioral Research"], img: projectInclusive },
 ];
 
 function Portfolio() {
@@ -108,7 +108,7 @@ function Portfolio() {
 
       {/* TRUST THE PROCESS — quote band */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <img src={trustImg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-90" />
+        <img src={manifestoBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
         <div className="relative z-10 text-center px-6">
           <p className="font-mono text-xs uppercase tracking-[0.4em] text-cream/60">— Manifesto</p>
@@ -191,7 +191,7 @@ function Portfolio() {
             <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground">(Expertise) — 006</div>
             <h2 className="mt-4 font-display text-6xl md:text-7xl text-cream">Built to <span className="italic text-ember">ship</span>.</h2>
             <div className="mt-8 relative h-48 overflow-hidden rounded-md">
-              <img src={codeCoffee} alt="" className="w-full h-full object-cover opacity-60" />
+              <img src={processSketch} alt="" className="w-full h-full object-cover opacity-60" />
             </div>
           </div>
           <div className="md:col-span-7 space-y-6">
@@ -229,7 +229,7 @@ function Portfolio() {
 
       {/* ADDITIONAL PROJECTS strip */}
       <section className="relative py-24 overflow-hidden">
-        <img src={wavesBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10" />
+        <img src={projectAi} alt="" className="absolute inset-0 w-full h-full object-cover opacity-10" />
         <div className="relative max-w-7xl mx-auto px-6 md:px-10">
           <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-12">(Also Built) — 007</div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -271,7 +271,7 @@ function Portfolio() {
 
       {/* CONTACT — Do More aesthetic */}
       <section id="contact" className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <img src={doMoreImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={contactBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/40 to-background" />
         <div className="relative z-10 w-full px-6 md:px-10 py-24">
           <div className="max-w-7xl mx-auto">
@@ -308,7 +308,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-8">
-          <img src={privateSite} alt="" className="w-full max-h-24 object-cover opacity-30 rounded" />
+          <img src={processSketch} alt="" className="w-full max-h-24 object-cover opacity-30 rounded" />
         </div>
       </footer>
     </main>
