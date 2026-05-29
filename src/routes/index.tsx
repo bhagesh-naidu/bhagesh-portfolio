@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { Marquee } from "@/components/Marquee";
-import trustImg from "@/assets/trust-process.jpeg";
-import doMoreImg from "@/assets/do-more.jpeg";
-import redLandscape from "@/assets/red-landscape.jpeg";
-import yourLimit from "@/assets/your-limit.jpeg";
-import peaceImg from "@/assets/peace-productivity.jpeg";
-import privateSite from "@/assets/private-site.jpeg";
-import codeCoffee from "@/assets/code-coffee.jpeg";
-import wavesBg from "@/assets/waves-bg.jpeg";
+import heroWorkspace from "@/assets/hero-workspace.jpg";
+import manifestoBg from "@/assets/manifesto-bg.jpg";
+import contactBg from "@/assets/contact-bg.jpg";
+import processSketch from "@/assets/process-sketch.jpg";
+import projectSpacecraft from "@/assets/project-spacecraft.jpg";
+import projectAi from "@/assets/project-ai.jpg";
+import projectEmergency from "@/assets/project-emergency.jpg";
+import projectInclusive from "@/assets/project-inclusive.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
