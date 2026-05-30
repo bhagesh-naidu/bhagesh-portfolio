@@ -234,8 +234,28 @@ function Portfolio() {
                 </motion.a>
               ))}
             </div>
+
+            {/* Visible project thumbnails grid */}
+            <div className="mt-24 grid grid-cols-2 md:grid-cols-3 gap-px bg-border">
+              {projects.map((p) => (
+                <a key={p.n} href="#" data-cursor="hover" className="group relative aspect-[4/5] overflow-hidden bg-ink">
+                  <img src={p.img} alt={p.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/70 flex justify-between">
+                      <span>{p.n}</span><span>{p.year}</span>
+                    </div>
+                    <div>
+                      <div className="font-display text-2xl md:text-3xl leading-none text-cream">{p.title}<span className="text-ember">.</span></div>
+                      <div className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-cream/60">{p.sub}</div>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
+
 
         {/* CHROME BAND */}
         <section className="relative h-[60vh] overflow-hidden">
