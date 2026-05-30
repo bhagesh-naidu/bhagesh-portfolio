@@ -2,14 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Marquee } from "@/components/Marquee";
-import heroBold from "@/assets/hero-bold.jpg";
-import portraitRed from "@/assets/portrait-red.jpg";
+import heroBold from "@/assets/bhagesh-hero.jpg";
+import portraitRed from "@/assets/bhagesh-hero.jpg";
 import chromeFlow from "@/assets/chrome-flow.jpg";
 import brutalistSpace from "@/assets/brutalist-space.jpg";
 import projectSpacecraft from "@/assets/project-spacecraft.jpg";
 import projectAi from "@/assets/project-ai.jpg";
 import projectEmergency from "@/assets/project-emergency.jpg";
 import projectInclusive from "@/assets/project-inclusive.jpg";
+import projectMotomate from "@/assets/project-motomate.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
