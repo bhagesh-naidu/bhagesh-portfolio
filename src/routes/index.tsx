@@ -144,8 +144,9 @@ function Portfolio() {
         {/* HERO */}
         <section ref={heroRef} className="relative min-h-screen overflow-hidden grain">
           <motion.div style={{ y: heroY, scale: heroScale }} className="absolute inset-0">
-            <img src={heroBold} alt="" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-ink/30" />
+            <img src={heroBold} alt="Bhagesh Thupakula portrait" className="w-full h-full object-cover object-[75%_center] md:object-[80%_center]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
           </motion.div>
 
           <div className="absolute top-24 left-6 md:left-10 font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-cream/80 reveal" style={{ animationDelay: "2.2s" }}>
