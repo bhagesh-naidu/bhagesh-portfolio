@@ -59,25 +59,26 @@ function Cursor() {
   return <div ref={ref} className="cursor-dot hidden md:block" />;
 }
 
-function HoverImage({ src, targetRef }: { src: string; targetRef: React.RefObject<HTMLElement | null> }) {
+function HoverImage({ src, visible }: { src: string | null; visible: boolean }) {
   const imgRef = useRef<HTMLImageElement>(null);
   useEffect(() => {
-    const t = targetRef.current; const img = imgRef.current; if (!t || !img) return;
-    let tx = 0, ty = 0, x = 0, y = 0, raf = 0, visible = false;
+    const img = imgRef.current; if (!img) return;
+    let tx = 0, ty = 0, x = 0, y = 0;
     const move = (e: MouseEvent) => { tx = e.clientX; ty = e.clientY; };
-    const enter = () => { visible = true; img.classList.add("is-visible"); };
-    const leave = () => { visible = false; img.classList.remove("is-visible"); };
     const tick = () => {
       x += (tx - x) * 0.15; y += (ty - y) * 0.15;
-      if (visible) img.style.transform = `translate(${x}px, ${y}px) translate(-50%,-50%) scale(1)`;
+      img.style.transform = `translate(${x}px, ${y}px) translate(-50%,-50%)`;
       raf = requestAnimationFrame(tick);
     };
-    raf = requestAnimationFrame(tick);
-    t.addEventListener("mousemove", move);
-    t.addEventListener("mouseenter", enter);
-    t.addEventListener("mouseleave", leave);
-    return () => { cancelAnimationFrame(raf); t.removeEventListener("mousemove", move); t.removeEventListener("mouseenter", enter); t.removeEventListener("mouseleave", leave); };
-  }, [targetRef]);
+    let raf = requestAnimationFrame(tick);
+    window.addEventListener("mousemove", move);
+    return () => { cancelAnimationFrame(raf); window.removeEventListener("mousemove", move); };
+  }, []);
+  useEffect(() => {
+    const img = imgRef.current; if (!img) return;
+    if (visible && src) img.classList.add("is-visible"); else img.classList.remove("is-visible");
+  }, [visible, src]);
+  if (!src) return null;
   return <img ref={imgRef} src={src} alt="" className="hover-reveal-img hidden md:block" />;
 }
 
