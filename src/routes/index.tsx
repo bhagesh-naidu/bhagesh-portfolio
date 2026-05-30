@@ -122,7 +122,7 @@ function Portfolio() {
     <>
       <Loader />
       <Cursor />
-      <HoverImage src={portraitRed} targetRef={workRef} />
+      <HoverImage src={hoverSrc} visible={hoverSrc !== null} />
 
       <main className="bg-background text-foreground overflow-x-hidden">
         {/* NAV */}
