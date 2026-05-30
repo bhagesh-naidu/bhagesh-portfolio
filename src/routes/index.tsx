@@ -113,6 +113,7 @@ function Portfolio() {
   const workRef = useRef<HTMLElement>(null);
 
   const [time, setTime] = useState("");
+  const [hoverSrc, setHoverSrc] = useState<string | null>(null);
   useEffect(() => {
     const update = () => setTime(new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }).format(new Date()) + " IST");
     update(); const i = setInterval(update, 1000); return () => clearInterval(i);
