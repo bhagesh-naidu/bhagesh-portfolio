@@ -220,6 +220,8 @@ function Portfolio() {
                   key={p.n} href="#"
                   initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.7, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                  onMouseEnter={() => setHoverSrc(p.img)}
+                  onMouseLeave={() => setHoverSrc(null)}
                   className="project-row border-b border-border py-8 md:py-10 grid grid-cols-12 items-baseline gap-4"
                   data-cursor="hover"
                 >
