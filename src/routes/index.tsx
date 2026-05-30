@@ -32,7 +32,7 @@ const projects = [
   { n: "02", year: "2025", title: "Emotion-Adaptive AI", sub: "AI · Behavioral UX", img: projectAi },
   { n: "03", year: "2024", title: "Emergency Comms", sub: "Critical Systems · A11y", img: projectEmergency },
   { n: "04", year: "2024", title: "Neuro-Inclusive Social", sub: "Inclusive · Research", img: projectInclusive },
-  { n: "05", year: "2024", title: "MotoMate Touring", sub: "Travel · IoT", img: chromeFlow },
+  { n: "05", year: "2024", title: "MotoMate Touring", sub: "Travel · IoT", img: projectMotomate },
 ];
 
 function Cursor() {
