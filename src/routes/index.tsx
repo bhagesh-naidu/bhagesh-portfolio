@@ -2,14 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Marquee } from "@/components/Marquee";
-import heroBold from "@/assets/hero-bold.jpg";
-import portraitRed from "@/assets/portrait-red.jpg";
+import heroBold from "@/assets/bhagesh-hero.jpg";
+import portraitRed from "@/assets/bhagesh-hero.jpg";
 import chromeFlow from "@/assets/chrome-flow.jpg";
 import brutalistSpace from "@/assets/brutalist-space.jpg";
 import projectSpacecraft from "@/assets/project-spacecraft.jpg";
 import projectAi from "@/assets/project-ai.jpg";
 import projectEmergency from "@/assets/project-emergency.jpg";
 import projectInclusive from "@/assets/project-inclusive.jpg";
+import projectMotomate from "@/assets/project-motomate.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,7 +32,7 @@ const projects = [
   { n: "02", year: "2025", title: "Emotion-Adaptive AI", sub: "AI · Behavioral UX", img: projectAi },
   { n: "03", year: "2024", title: "Emergency Comms", sub: "Critical Systems · A11y", img: projectEmergency },
   { n: "04", year: "2024", title: "Neuro-Inclusive Social", sub: "Inclusive · Research", img: projectInclusive },
-  { n: "05", year: "2024", title: "MotoMate Touring", sub: "Travel · IoT", img: chromeFlow },
+  { n: "05", year: "2024", title: "MotoMate Touring", sub: "Travel · IoT", img: projectMotomate },
 ];
 
 function Cursor() {
@@ -143,8 +144,9 @@ function Portfolio() {
         {/* HERO */}
         <section ref={heroRef} className="relative min-h-screen overflow-hidden grain">
           <motion.div style={{ y: heroY, scale: heroScale }} className="absolute inset-0">
-            <img src={heroBold} alt="" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-ink/30" />
+            <img src={heroBold} alt="Bhagesh Thupakula portrait" className="w-full h-full object-cover object-[75%_center] md:object-[80%_center]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
           </motion.div>
 
           <div className="absolute top-24 left-6 md:left-10 font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-cream/80 reveal" style={{ animationDelay: "2.2s" }}>
