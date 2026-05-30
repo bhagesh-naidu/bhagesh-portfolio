@@ -112,12 +112,12 @@
 
   /* Hover-reveal image (Luke Baffait style) */
   .hover-reveal-img {
-    position: fixed; top: 0; left: 0; width: 360px; height: 480px;
-    pointer-events: none; z-index: 60; opacity: 0; transform: translate(-50%, -50%) scale(0.9);
-    transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+    position: fixed; top: 0; left: 0; width: 320px; height: 420px;
+    pointer-events: none; z-index: 60; opacity: 0;
+    transition: opacity 0.35s ease;
     object-fit: cover; will-change: transform, opacity;
   }
-  .hover-reveal-img.is-visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  .hover-reveal-img.is-visible { opacity: 1; }
 
   /* Project row hover morph */
   .project-row { transition: padding 0.5s cubic-bezier(0.16,1,0.3,1), color 0.3s; }
