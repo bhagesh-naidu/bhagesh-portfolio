@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Marquee } from "@/components/Marquee";
-import heroBold from "@/assets/bhagesh-hero.jpg";
-import portraitRed from "@/assets/bhagesh-hero.jpg";
+import geminiHero from "@/assets/Gemini_Generated_Image_yu5cueyu5cueyu5c.png";
+
+
 import chromeFlow from "@/assets/chrome-flow.jpg";
 import brutalistSpace from "@/assets/brutalist-space.jpg";
 import projectSpacecraft from "@/assets/project-spacecraft.jpg";
@@ -146,9 +147,11 @@ function Portfolio() {
         {/* HERO */}
         <section ref={heroRef} className="relative min-h-screen overflow-hidden grain">
           <motion.div style={{ y: heroY, scale: heroScale }} className="absolute inset-0">
-            <img src={heroBold} alt="Bhagesh Thupakula portrait" className="w-full h-full object-cover object-[center_top] md:object-contain md:object-[right_center]" />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+            <img src={geminiHero} alt="Bhagesh Thupakula portrait" className="w-full h-full object-cover object-[center_top] md:object-contain md:object-[right_center] scale-[1.08] opacity-100 mix-blend-normal" />
+
+
+
+
           </motion.div>
 
           <div className="absolute top-24 left-6 md:left-10 font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-cream/80 reveal" style={{ animationDelay: "2.2s" }}>
